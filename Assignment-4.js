@@ -45,8 +45,32 @@ function isLGSeven(isLGSevenInput) {
 
 }
 
-let lessOrGreatResult = isLGSeven(15);
-console.log(lessOrGreatResult);
+let lr = isLGSeven(15);
+console.log(lr);
+
+
+
+// Problem 4: Finding Bad data
+
+function findingBadData(inputArray) {
+    let negativeCount = 0;
+    for (let i = 0; i < inputArray.length; i++)
+        if (inputArray[i] < 0) {
+            negativeCount++;
+        }
+    return negativeCount;
+}
+
+let res = findingBadData([-4, -9, -5, -33, -55])
+console.log(res);
+
+
+
+// Problem 5: Convert your gems into diamond
+
+function gemsToDiamond() {
+
+}
 
 
 
