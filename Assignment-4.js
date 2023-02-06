@@ -37,9 +37,16 @@ console.log(checkEvenOdd);
 
 // Problem 3: Is Less or Greater than seven
 
-function isLGSeven() {
+function isLGSeven(isLGSevenInput) {
+    if (isLGSevenInput < 7) {
+        return (isLGSevenInput - 7);
+    }
+    return isLGSevenInput * 2;
 
 }
+
+let lessOrGreatResult = isLGSeven(15);
+console.log(lessOrGreatResult);
 
 
 
