@@ -18,6 +18,29 @@ console.log(mindGameResult);
 // Problem 2: Finding even or odd
 
 function evenOdd(string) {
+    for (let i = 0; i < string.length; i++) {
+        if (string.length % 2 == 0) {
+            console.log(string, "is Even");
+        }
+        else {
+            return "Odd";
+        }
+        return string;
+    }
+}
+
+let checkEvenOdd = evenOdd("Pheroo");
+console.log(checkEvenOdd);
+
+
+
+
+// Problem 3: Is Less or Greater than seven
+
+function isLGSeven() {
 
 }
+
+
+
 
