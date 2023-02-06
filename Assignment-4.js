@@ -68,9 +68,20 @@ console.log(res);
 
 // Problem 5: Convert your gems into diamond
 
-function gemsToDiamond() {
+function gemsToDiamond(friendOne, friendTwo, friendThree) {
+    const firstFriendConvertedDiamond = friendOne * 21;
+    const secondFriendConvertedDiamond = friendTwo * 32;
+    const thirdFriendConvertedDiamond = friendThree * 43;
+    const totalDiamond = firstFriendConvertedDiamond + secondFriendConvertedDiamond + thirdFriendConvertedDiamond;
 
+    if (totalDiamond > 2000) {
+        return totalDiamond - 2000;
+    }
+    return totalDiamond;
 }
+
+let resDi = gemsToDiamond(100, 5, 1);
+console.log(resDi);
 
 
 
