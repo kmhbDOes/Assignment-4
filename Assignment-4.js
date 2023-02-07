@@ -43,8 +43,9 @@ console.log(checkEvenOdd);
 // function isLGSeven takes a number parameter as input, If that number is less than 7 then return difference between that number and 7 otherwise double the input.
 
 function isLGSeven(isLGSevenInput) {
-    if (isLGSevenInput < 7) {
-        return (isLGSevenInput - 7);
+    let inputValueDifference = isLGSevenInput - 7
+    if (inputValueDifference < 7) {
+        return inputValueDifference;
     }
     if (typeof isLGSevenInput == 'string') {
         return "Enter Valid Number";
@@ -53,22 +54,22 @@ function isLGSeven(isLGSevenInput) {
 
 }
 
-let lr = isLGSeven(15);
+let lr = isLGSeven(6);
 console.log(lr);
 
 
 
 // Problem 4: Finding Bad data
 
-// function findingBadData takes a array as input
+// function findingBadData takes a array as input which will have positive/ negative values. If there is negative values, this function will count them in and return the total amount of bad data.
 
 function findingBadData(inputArray) {
-    let negativeCount = 0;
+    let badDataCount = 0;
     for (let i = 0; i < inputArray.length; i++)
         if (inputArray[i] < 0) {
-            negativeCount++;
+            badDataCount++;
         }
-    return negativeCount;
+    return badDataCount;
 }
 
 let res = findingBadData([-4, -9, -5, -33, -55])
@@ -77,6 +78,8 @@ console.log(res);
 
 
 // Problem 5: Convert your gems into diamond
+
+// This function will count how much diamond can one friend generate in total with three parameters, Given each friend has preset values. And if the total diamond amount is twice of one thousand then 2000 will be deducted from 2000 and thus it returns total remaining diamond.
 
 function gemsToDiamond(friendOne, friendTwo, friendThree) {
     const firstFriendConvertedDiamond = friendOne * 21;
