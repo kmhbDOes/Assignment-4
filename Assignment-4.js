@@ -4,7 +4,7 @@
 function mindGame(mindGameInput) {
     let mindGameOutput = (mindGameInput * 3 + 10) / 2 - 5;
 
-    if (typeof mindGameInput == 'string') {
+    if (typeof mindGameInput !== 'number') {
         return "Please Enter a valid number:"
     }
 
@@ -40,7 +40,7 @@ console.log(checkEvenOdd);
 
 // Problem 3: Is Less or Greater than seven
 
-// function isLGSeven takes a number parameter as input, If that number is less than 7 then return difference between that number and 7 otherwise double the input.
+// function isLGSeven takes a number parameter as input, If that number is less than 7 then return difference between that number and 7 otherwise doubles the input.
 
 function isLGSeven(isLGSevenInput) {
     let inputValueDifference = isLGSevenInput - 7
@@ -69,6 +69,8 @@ function findingBadData(inputArray) {
         if (inputArray[i] < 0) {
             badDataCount++;
         }
+
+
     return badDataCount;
 }
 
@@ -87,13 +89,16 @@ function gemsToDiamond(friendOne, friendTwo, friendThree) {
     const thirdFriendConvertedDiamond = friendThree * 43;
     const totalDiamond = firstFriendConvertedDiamond + secondFriendConvertedDiamond + thirdFriendConvertedDiamond;
 
+    if (typeof friendOne !== 'number' || typeof friendTwo !== 'number' || typeof friendThree !== 'number') {
+        return "Enter valid Number";
+    }
     if (totalDiamond > 2000) {
         return totalDiamond - 2000;
     }
     return totalDiamond;
 }
 
-let resDi = gemsToDiamond(100, 5, 1);
+let resDi = gemsToDiamond(1, 1, 1);
 console.log(resDi);
 
 
