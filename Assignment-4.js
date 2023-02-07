@@ -20,19 +20,23 @@ console.log(mindGameResult);
 
 // function evenOdd takes a string as input and counts the length and returns based on the count that if it's even or odd
 
-function evenOdd(string) {
-    for (let i = 0; i < string.length; i++) {
-        if (string.length % 2 == 0) {
+function evenOdd(inputString) {
+    for (let i = 0; i < inputString.length; i++) {
+
+        if (inputString.length % 2 == 0) {
             return "even";
         }
         else {
             return "odd";
         }
     }
-    return string;
+    if (inputString !== 'string') {
+        return "Enter a string:"
+    }
+    return inputString;
 }
 
-let checkEvenOdd = evenOdd("Phero");
+let checkEvenOdd = evenOdd("chatgpt");
 console.log(checkEvenOdd);
 
 
@@ -40,14 +44,14 @@ console.log(checkEvenOdd);
 
 // Problem 3: Is Less or Greater than seven
 
-// function isLGSeven takes a number parameter as input, If that number is less than 7 then return difference between that number and 7 otherwise doubles the input.
+// function isLGSeven takes a number parameter as input, If the difference between input and 7 is less than 7 then return difference between that number and 7 otherwise doubles the input.
 
 function isLGSeven(isLGSevenInput) {
     let inputValueDifference = isLGSevenInput - 7
     if (inputValueDifference < 7) {
         return inputValueDifference;
     }
-    if (typeof isLGSevenInput == 'string') {
+    if (typeof isLGSevenInput !== 'number') {
         return "Enter Valid Number";
     }
     return isLGSevenInput * 2;
@@ -65,11 +69,14 @@ console.log(lr);
 
 function findingBadData(inputArray) {
     let badDataCount = 0;
-    for (let i = 0; i < inputArray.length; i++)
+    for (let i = 0; i < inputArray.length; i++) {
         if (inputArray[i] < 0) {
             badDataCount++;
         }
-
+    }
+    if (Array.isArray(inputArray) == false) {
+        return "Enter Valid Array:"
+    }
 
     return badDataCount;
 }
